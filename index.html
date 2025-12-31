@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Final Output</title>
+</head>
+<body>
+
+<header>
+  <div class="Head">
+    <h2 class="h1"><b>My Portfolio</b></h2>
+  </div>
+
+  <div class="Header">
+    <a href="#about" class="heads">About</a>
+    <a href="#skills" class="heads">Skills</a>
+    <a href="#projects" class="heads">Projects</a>
+    <a href="#contact" class="heads">Contact</a>
+  </div>
+
+  <div class="mode-switch">
+    <input type="checkbox" id="mode-toggle-checkbox">
+    <label for="mode-toggle-checkbox" class="switch">
+      <div class="slider"></div>
+      <span class="sun">🌞</span>
+      <span class="moon">🌙</span>
+    </label>
+  </div>
+</header>
+
+<div class="me">
+  <div class="picturee">
+    <img src="first.png" alt="Rj Q. Abayata" class="picture">
+  </div>
+  <div class="AboutMe">
+    <div class="rj"><h1>Welcome to my portfolio!</h1></div>
+    <div class="rj"><h1>I'm Rj Q Abayata</h1></div>
+    <div class="rj"><h3>Aspiring Web Development | IT Student</h3></div>
+    <div class="bold">
+      <p>“Dream big, start small,
+      and stay consistent, because every skill
+      you master today brings you closer to the
+      future you imagine.”</p>
+    </div>
+  </div>
+</div>
+
+<div class="About" id="about">
+  <div class="middle"><h1>About Me</h1></div>
+  <div class="hehe">
+    <div class="Education">
+      <div class="educ"><h3>Education:</h3></div>
+      <div class="context">
+        <p>I am currently studying at <b>Eastern Visayas</b>
+        <b>State University Ormoc Campus</b>, taking up a
+        <b>Bachelor of Science in Information Technology</b>.
+        <p>As an IT student and aspiring web developer, I
+        am continuously building my skills in programming.</p>
+      </div>
+    </div>
+    <div class="Education">
+      <div class="educ"><h3>Hobbies</h3></div>
+      <div class="context">
+        <p>When I’m AFK, I usually enjoy playing <b>musical
+        instruments like the ukulele and guitar (still learning)</b>.
+        <p>I also like playing <b>video games</b>
+        occasionally to relax and have fun.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Skills" id="skills">
+  <div class="middle"><h1>Skills</h1></div>
+  <div class="hehe">
+    <div class="Tools">
+      <div class="educ"><h3>Work-Related Skills</h3></div>
+      <div class="context">
+        <p>Fast learner</p>
+        <p>Adaptable to new tasks and environments</p>
+        <p>Time management</p>
+        <p>Teamwork and collaboration</p>
+      </div>
+    </div>
+    <div class="Tools">
+      <div class="educ"><h3>Programming Skills</h3></div>
+      <div class="context">
+        <p>HTML & CSS Fundamentals</p>
+        <p>Python</p>
+        <p>JavaScript</p>
+        <p>C</p>
+      </div>
+    </div>
+    <div class="Tools">
+      <div class="educ"><h3>Tools</h3></div>
+      <div class="context">
+        <p>VScode</p>
+        <p>Git & Github</p>
+        <p>Browser DevTool</p>
+        <p>ChatGpt</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Projects" id="projects">
+  <div class="middle"><h1>Projects</h1></div>
+  <div class="TheProjects">
+    <div class="one">
+      <div class="image">
+        <img src="second.png" alt="Project" class="image">
+      </div>
+      <div class="contextt">
+        <div class="educc"><b>Flexbox</b></div>
+        <p>This is where we practice our ability to</p>
+        <p>make flexbox by sir Po. It's a solo</p>
+        <p>output so I did all the work.</p>
+        <div class="use">
+          <div class="used"><p>HTML</p></div>
+          <div class="used"><p>CSS</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="one">
+      <div class="image">
+        <img src="third.png" alt="Project" class="image">
+      </div>
+      <div class="contextt">
+        <div class="educc"><b>Flexbox</b></div>
+        <p>This is where we practice our ability to</p>
+        <p>make flexbox by sir Po. It's a solo</p>
+        <p>output so I did all the work.</p>
+        <div class="use">
+          <div class="used"><p>Python</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Contact" id="contact">
+  <div class="middle"><h1>Get in Touch</h1></div>
+  <div class="MyContact">
+    <div class="ContactInfo">
+      <h4>Name:</h4>
+      <input class="input" placeholder="Enter your full name">
+      <h4>Email:</h4>
+      <input class="input" placeholder="example@gmail.com">
+      <h4>Message:</h4>
+      <input class="inputt" placeholder="Your concern">
+
+      <div class="contact-icons">
+        <a href="mailto:rj.abayata@evsu.edu.ph" class="icon">
+          <i class="fa-solid fa-envelope"></i> rj.abayata@evsu.edu.ph
+        </a>
+        <a href="https://facebook.com/BoangDisBoy" target="_blank" class="icon">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const checkbox = document.getElementById('mode-toggle-checkbox');
+const body = document.body;
+
+const savedMode = localStorage.getItem('theme');
+if (savedMode === 'dark-mode') {
+  checkbox.checked = true;
+  body.classList.add('dark-mode');
+}
+
+checkbox.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode');
+});
+
+</script>
+
+</body>
+</html>
